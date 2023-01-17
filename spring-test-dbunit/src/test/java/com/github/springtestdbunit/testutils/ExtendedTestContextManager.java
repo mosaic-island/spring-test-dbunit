@@ -18,15 +18,12 @@ package com.github.springtestdbunit.testutils;
 
 import java.lang.reflect.Constructor;
 
+import org.junit.Ignore;
 import org.springframework.test.annotation.DirtiesContext.HierarchyMode;
 import org.springframework.test.context.TestContext;
 import org.springframework.test.context.TestContextManager;
 
-/**
- * Extended version of the {@link TestContextManager} that can be used when writing tests.
- *
- * @author Phillip Webb
- */
+
 public class ExtendedTestContextManager extends TestContextManager {
 
 	private Object testInstance;

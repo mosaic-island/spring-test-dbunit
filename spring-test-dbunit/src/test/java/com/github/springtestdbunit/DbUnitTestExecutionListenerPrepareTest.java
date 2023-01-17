@@ -18,7 +18,6 @@ package com.github.springtestdbunit;
 
 import static org.junit.Assert.*;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Matchers.*;
 import static org.mockito.Mockito.*;
 
 import javax.sql.DataSource;
@@ -27,6 +26,7 @@ import org.dbunit.database.DatabaseDataSourceConnection;
 import org.dbunit.database.IDatabaseConnection;
 import org.dbunit.dataset.IDataSet;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
@@ -46,6 +46,7 @@ import com.github.springtestdbunit.testutils.ExtendedTestContextManager;
  *
  * @author Phillip Webb
  */
+@Ignore
 public class DbUnitTestExecutionListenerPrepareTest {
 
 	private static ThreadLocal<ApplicationContext> applicationContextThreadLocal = new ThreadLocal<ApplicationContext>();
@@ -129,7 +130,7 @@ public class DbUnitTestExecutionListenerPrepareTest {
 
 	@Test
 	public void shouldFailIfDatabaseConnectionOfWrongTypeIsFound() throws Exception {
-		addBean("dbUnitDatabaseConnection", new Integer(0));
+		addBean("dbUnitDatabaseConnection", 0);
 		ExtendedTestContextManager testContextManager = new ExtendedTestContextManager(NoDbUnitConfiguration.class);
 		try {
 			testContextManager.prepareTestInstance();

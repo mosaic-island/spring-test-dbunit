@@ -16,8 +16,8 @@ This project will be built using Apache Maven.  Here is the complete POM file wi
 	<artifactId>spring-dbunit-example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
-		<spring.version>3.0.5.RELEASE</spring.version>
-		<hibernate.core.version>3.5.6-Final</hibernate.core.version>
+		<spring.version>5.3.25</spring.version>
+		<hibernate.core.version>5.6.14-Final</hibernate.core.version>
 	</properties>
 	<repositories>
 		<repository>

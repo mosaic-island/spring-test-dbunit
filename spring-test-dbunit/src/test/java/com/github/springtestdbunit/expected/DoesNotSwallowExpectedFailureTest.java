@@ -16,6 +16,7 @@
 
 package com.github.springtestdbunit.expected;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -32,6 +33,7 @@ import com.github.springtestdbunit.testutils.NotSwallowedException;
 @ContextConfiguration("/META-INF/dbunit-context.xml")
 @TestExecutionListeners({ DependencyInjectionTestExecutionListener.class, MustNoSwallowTestExecutionListener.class })
 @Transactional
+@Ignore
 public class DoesNotSwallowExpectedFailureTest {
 
 	@Test

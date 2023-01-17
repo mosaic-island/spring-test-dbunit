@@ -53,8 +53,8 @@ public class EntityAssert implements InitializingBean {
 	}
 
 	public void assertValues(String... values) {
-		SortedSet<String> expected = new TreeSet<String>(Arrays.asList(values));
-		SortedSet<String> actual = new TreeSet<String>();
+		SortedSet<String> expected = new TreeSet<>(Arrays.asList(values));
+		SortedSet<String> actual = new TreeSet<>();
 		TypedQuery<SampleEntity> query = this.entityManager.createQuery(this.criteriaQuery);
 		List<SampleEntity> results = query.getResultList();
 		for (SampleEntity sampleEntity : results) {

@@ -20,15 +20,18 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringRunner;
 
 /**
  * Test the initial state of the database to ensure that import.sql has run.
  *
  * @author Phillip Webb
  */
-@RunWith(SpringJUnit4ClassRunner.class)
+@RunWith(SpringRunner.class)
 @ContextConfiguration("/META-INF/dbunit-context.xml")
+//@Sql(scripts = {"classpath:data.sql"})
 public class HibernateImportTest {
 
 	@Autowired
