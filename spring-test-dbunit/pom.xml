@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.springtestdbunit</groupId>
 	<artifactId>spring-test-dbunit</artifactId>
-	<version>2.7.1</version>
+	<version>2.7.3</version>
 	<packaging>jar</packaging>
 	<name>Spring Test DBUnit</name>
 	<description>Integration between the Spring testing framework and DBUnit</description>
@@ -40,7 +40,7 @@
 		<tag>HEAD</tag>
 	</scm>
 	<prerequisites>
-		<maven>3.8.7</maven>
+		<maven>3.9.0</maven>
 	</prerequisites>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -61,7 +61,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-antrun-plugin</artifactId>
-				<version>3.0.0</version>
+				<version>3.1.0</version>
 				<executions>
 					<execution>
 						<id>copy-readme</id>
@@ -93,56 +93,38 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.1.0</version>
+				<version>3.2.0</version>
 			</plugin>
 			<plugin>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>3.3.2</version>
+				<version>3.4.1</version>
 			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.10.1</version>
+				<version>3.11.0</version>
 				<configuration>
 					<compilerVersion>${java.version}</compilerVersion>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
-					<testSource>11</testSource>
-					<testTarget>11</testTarget>
+					<testSource>${java.version}</testSource>
+					<testTarget>${java.version}</testTarget>
 				</configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-deploy-plugin</artifactId>
-				<version>2.8.2</version>
+				<version>3.0.0</version>
 			</plugin>
-<!--
-			<plugin>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.10</version>
-				<configuration>
-					<additionalConfig>
-						<file>
-							<name>.settings/org.eclipse.jdt.ui.prefs</name>
-							<location>../eclipse/org.eclipse.jdt.ui.prefs</location>
-						</file>
-						<file>
-							<name>.settings/org.eclipse.jdt.core.prefs</name>
-							<location>../eclipse/org.eclipse.jdt.core.prefs</location>
-						</file>
-					</additionalConfig>
-				</configuration>
-			</plugin>
--->
 			<plugin>
 				<artifactId>maven-install-plugin</artifactId>
-				<version>2.5.2</version>
+				<version>3.1.0</version>
 			</plugin>
 			<plugin>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.2.2</version>
+				<version>3.3.0</version>
 			</plugin>
 			<plugin>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.5.3</version>
+				<version>3.0.0-M7</version>
 				<dependencies>
 					<dependency>
 						<groupId>org.apache.maven.scm</groupId>
@@ -164,62 +146,11 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
-				<version>2.6</version>
+				<version>3.3.0</version>
 			</plugin>
-<!--
-			<plugin>
-				<artifactId>maven-site-plugin</artifactId>
-				<version>3.10.0</version>
-				<dependencies>
-					<dependency>
-						<groupId>org.apache.maven.doxia</groupId>
-						<artifactId>doxia-module-markdown</artifactId>
-						<version>1.7</version>
-					</dependency>
-				</dependencies>
-				<configuration>
-					<reportPlugins>
-						<plugin>
-							<artifactId>maven-javadoc-plugin</artifactId>
-							<version>2.10.3</version>
-						</plugin>
-						<plugin>
-							<artifactId>maven-jxr-plugin</artifactId>
-							<version>2.5</version>
-						</plugin>
-						<plugin>
-							<artifactId>maven-pmd-plugin</artifactId>
-							<version>3.6</version>
-							<configuration>
-								<targetJdk>${java.version}</targetJdk>
-							</configuration>
-						</plugin>
-						<plugin>
-							<artifactId>maven-project-info-reports-plugin</artifactId>
-							<version>2.9</version>
-						</plugin>
-						<plugin>
-							<artifactId>maven-surefire-report-plugin</artifactId>
-							<version>2.19.1</version>
-						</plugin>
-						<plugin>
-							<groupId>org.codehaus.mojo</groupId>
-							<artifactId>cobertura-maven-plugin</artifactId>
-							<version>2.7</version>
-							<configuration>
-								<formats>
-									<format>xml</format>
-									<format>html</format>
-								</formats>
-							</configuration>
-						</plugin>
-					</reportPlugins>
-				</configuration>
-			</plugin>
--->
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.22.2</version>
+				<version>3.0.0-M9</version>
 			</plugin>
 			<plugin>
 				<artifactId>maven-source-plugin</artifactId>
@@ -233,18 +164,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!--<plugin>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>3.3.2</version>
-				<executions>
-					<execution>
-						<id>attach-javadocs</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>-->
 			<plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
@@ -270,7 +189,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
-				<version>3.0.0-M7</version>
+				<version>3.0.0-M9</version>
 			</plugin>
 		</plugins>
 	</reporting>
@@ -329,7 +248,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>5.6.14.Final</version>
+			<version>5.6.15.Final</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -341,20 +260,20 @@
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
-			<version>4.5.1</version>
+			<version>5.1.1</version>
 			<type>jar</type>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>1.7.36</version>
+			<version>2.0.6</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.7.36</version>
+			<version>2.0.6</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

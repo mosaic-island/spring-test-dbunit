@@ -3,15 +3,15 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.springtestdbunit.parent</groupId>
 	<artifactId>spring-test-dbunit-parent</artifactId>
-	<version>2.7.0</version>
+	<version>2.7.3</version>
 	<packaging>pom</packaging>
 	<name>Spring Test DBUnit Parent</name>
 	<modules>
 		<module>spring-test-dbunit</module>
-<!--		<module>spring-test-dbunit-sample</module>-->
+		<module>spring-test-dbunit-sample</module>
 	</modules>
 	<prerequisites>
-		<maven>3.8.7</maven>
+		<maven>3.9.0</maven>
 	</prerequisites>
 
 	<distributionManagement>
