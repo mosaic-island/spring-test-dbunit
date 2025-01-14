@@ -11,21 +11,21 @@
 		<module>spring-test-dbunit-sample</module>
 	</modules>
 	<prerequisites>
-		<maven>3.9.0</maven>
+		<maven>3.9.9</maven>
 	</prerequisites>
 
 	<distributionManagement>
 
 		<snapshotRepository>
-			<id>mi-nexus-snapshots</id>
+			<id>which-columbus-repo</id>
 			<name>mi-snapshots</name>
-			<url>https://nexus.columbus-qa.product.which.co.uk/repository/maven-snapshots</url>
+			<url>https://which-545666455872.d.codeartifact.eu-west-1.amazonaws.com/maven/columbus-repo</url>
 		</snapshotRepository>
 
 		<repository>
-			<id>mi-nexus-releases</id>
+			<id>which-columbus-repo</id>
 			<name>mi-releases</name>
-			<url>https://nexus.columbus-qa.product.which.co.uk/repository/maven-releases</url>
+			<url>https://which-545666455872.d.codeartifact.eu-west-1.amazonaws.com/maven/columbus-repo</url>
 		</repository>
 
 	</distributionManagement>

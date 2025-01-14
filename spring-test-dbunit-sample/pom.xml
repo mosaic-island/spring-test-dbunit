@@ -6,21 +6,21 @@
 	<version>2.7.18</version>
 	<name>Spring Test DBUnit Sample</name>
 	<properties>
-		<spring.version>5.3.31</spring.version>
+		<spring.version>5.3.39</spring.version>
 	</properties>
 
 	<distributionManagement>
 
 		<snapshotRepository>
-			<id>mi-nexus-snapshots</id>
+			<id>which-columbus-repo</id>
 			<name>mi-snapshots</name>
-			<url>https://nexus.columbus-qa.product.which.co.uk/repository/maven-snapshots</url>
+			<url>https://which-545666455872.d.codeartifact.eu-west-1.amazonaws.com/maven/columbus-repo</url>
 		</snapshotRepository>
 
 		<repository>
-			<id>mi-nexus-releases</id>
+			<id>which-columbus-repo</id>
 			<name>mi-releases</name>
-			<url>https://nexus.columbus-qa.product.which.co.uk/repository/maven-releases</url>
+			<url>https://which-545666455872.d.codeartifact.eu-west-1.amazonaws.com/maven/columbus-repo</url>
 		</repository>
 
 	</distributionManagement>
@@ -31,7 +31,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.11.0</version>
+				<version>3.13.0</version>
 				<configuration>
 					<compilerVersion>11</compilerVersion>
 					<source>11</source>
